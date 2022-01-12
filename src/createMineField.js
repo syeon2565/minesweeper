@@ -27,7 +27,14 @@ function createMineField(fieldInfo) {
       if (arr[i][j] === "*") {
         for (var a = i - 1; a <= i + 1; a++) {
           for (var b = j - 1; b <= j + 1; b++) {
-            if (arr[a][b] != "*") arr[a][b]++;
+            if (
+              a >= 0 &&
+              a < arr.length &&
+              b >= 0 &&
+              b < arr[i].length &&
+              arr[a][b] != "*"
+            )
+              arr[a][b]++;
           }
         }
       }
@@ -35,7 +42,7 @@ function createMineField(fieldInfo) {
   }
 
   // 2차원 배열을 반환한다
-  console.log(fieldInfo.count);
+  console.log(arr);
 }
 
 module.exports = createMineField;
