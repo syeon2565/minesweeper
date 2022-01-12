@@ -6,5 +6,6 @@ function createArray(fieldInfo) {
       arr[i][j] = 0;
     }
   }
+  return arr;
 }
-modulel.exports = createArray();
+module.exports = createArray;
