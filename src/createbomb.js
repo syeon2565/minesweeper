@@ -1,4 +1,4 @@
-//폭탄 랜덤하게 만들기
+//폭탄 랜덤하게 위치 배정
 const _ = require("lodash");
 
 function createBomb(fieldInfo, arr) {
